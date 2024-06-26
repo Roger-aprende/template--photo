@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Loved+by+the+King&family=Lovers+Quarrel&display=swap');
+
+@font-face {
+	font-family: 'Tangerine';
+	src: url(/assets/fonts/Tangerine-Bold.ttf) format(TrueType);
+}
+
+@font-face{
+    font-family: 'poppins';
+    src: url(assets/fonts/Poppins-Bold.ttf) format(TrueType);
+	src: url(assets/fonts/Poppins-Light.ttf) format(TrueType);
+	src: url(assets/fonts/Poppins-Regular.ttf) format(TrueType);
+	src: url(assets/fonts/Poppins-Medium.ttf) format(TrueType);
+	src: url(assets/fonts/Poppins-SemiBold.ttf) format(TrueType);
+}
+
+:root{
+    --font-main:'Tangerine';
+    --color-transparente: rgba(31, 28, 20, 0.70);
+    --color-white: #f2f2f2;
+    --color-main: #221d03;
+    /* --img-header: linear-gradient(179deg, #525252 0%, #efecec 65%) url(https://media.istockphoto.com/id/1457854096/es/foto/besos-de-pareja-joven-cubiertos-por-ramo-de-flores-pareja-enamorada-con-el-tel%C3%B3n-de-fondo-de.jpg?s=612x612&w=0&k=20&c=MPbSNofKLrqmSGpWHtAWdYl-wTjvzuHedYQ894VW17Q=); */
+    --img-header: linear-gradient(180deg, #bdbaba73 0%,  #0000008c 65%), url(https://media.istockphoto.com/id/1457854096/es/foto/besos-de-pareja-joven-cubiertos-por-ramo-de-flores-pareja-enamorada-con-el-tel%C3%B3n-de-fondo-de.jpg?s=612x612&w=0&k=20&c=MPbSNofKLrqmSGpWHtAWdYl-wTjvzuHedYQ894VW17Q=);
+        color: red;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding-left:0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: var(--img-header);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    height: 120vh;
+
+        & .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 25%;
+            padding: 0 1em;
+
+                & .logo{
+                    width: 7rem;
+                    height: 8rem;
+                    object-fit: cover;
+                } 
+                         
+    }
+
+
+
+    & .box-central{
+        align-self: center;
+        margin-top: 15%;
+        font-size:  1.8rem;
+        font-family: var(--font-main);
+        color: #f2f2f2;
+
+        & .text{
+            text-align: center;
+            font-size:  1.6rem;
+
+            & .span{
+                text-decoration: underline;
+                text-decoration-color: #302e2e;
+            }
+        }       
+    }
+}
+
+.menu-desktop{
+    display: none;
+    
+}
+
+ .menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 230px;
+    padding: 1.5rem .5rem;
+    transform: translateX(230px);
+    background-color: #000000ee;
+    transition: transform 1s ease-in-out;
+
+            & .icon-menu-close{
+                width: 30px;
+                height: 30px;
+            }
+
+            &  .menu__header{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 3rem;
+                font-size: 1.5em;
+                color: var(--color-white);
+            }
+}
+
+/* .a{
+    display:block;
+    padding: 0 0.5rem;
+    font-family: 'poppins';
+    font-weight: bolder;
+    color: var(--color-white); 
+
+
+        &:active{
+            background-color: #f2f2f2e0;
+            color: #000;
+            text-decoration: underline;
+        }
+    } */
+
+
+.menu-animation{
+    transition: transform 1s ease-in-out;
+    transform: translateX(0);
+}
+
+
+.main{
+    padding-top: 5rem;
+    background-color: #14171F;
+}
+
+
+.container-exp{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+    padding: 0 1rem;
+
+        & .title{
+            order: -2;
+            font-family: 'poppins';
+        }
+
+        & .text{
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: normal;
+            font-family: 'lexend deca';
+        }
+
+        & .container-img{
+            order:-1;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-auto-columns: 1fr;
+            grid-auto-flow: row;
+
+                & .img-1{
+                    grid-area: 1 / 1 / 3 / 5;
+                    width: 100%;
+                }
+
+                & .img-2{
+                    width: 100%;
+                    grid-area: 2 / 3 / -1 / -1; 
+                }
+        }
+}
+
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    
+    
+        & .title-h2{
+            margin-top: 4.5rem;
+            font-family: 'poppins';
+            text-align: center;
+            color: #fff;;
+        }
+}
+
+.proyectos-img{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: dense;
+    gap: .5rem;
+    padding: 1rem 1.5rem;
+
+
+        .img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .img:nth-child(odd) {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+}
+
+
+.nicho{
+    margin-top: 5rem;
+    padding: 1.5rem;
+}
+
+.nicho__title{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'poppins';
+    color: #fff;
+
+        & img {
+            width: 2.5rem;
+            height: 2.5rem;
+        } 
+
+        & .nicho__camara{
+            transform: rotate(-45deg);
+        }
+
+}
+
+.nicho__galery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    grid-auto-flow: row;
+    gap: .5rem;
+    margin-top: 2.5rem;
+
+        & img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        } 
+ } 
+
+
+.nicho__subgalery{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    margin-top: 3rem;
+
+        & img{
+            width: 0px;
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: .8;
+            transition:all .5s ease-out;
+        }
+
+        & img:hover{
+            cursor: crosshair;
+            width: 300px;
+            opacity: 1;
+            filter: contrast(120%);
+        }
+}
+
+.nicho__footer{
+    padding: 1.5rem 1rem;
+    font-family: 'lexend deca';
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 15px #fff8;
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    background-color: brown;
+
+        & p{
+            width: 65%;
+            text-align: center;
+            font-size: 22px;
+            font-family: 'poppins';
+            border-bottom: 1px solid #fff;
+            color: #fff;
+        }
+}
+
+.footer__logos{
+    margin-top: 1rem;
+
+        & img{
+            padding: .5rem;
+            margin-right: 1rem;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+}
+
+
+
+
+/* ============Keyframes================== */
+
+@keyframes opacity-img{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(45px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(45px);
+
+    }   
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(120px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(120px);
+
+    }   
+}
+
+
+
+
+
+ 
+
+
+
+
